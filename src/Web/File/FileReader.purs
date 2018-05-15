@@ -1,5 +1,6 @@
 module Web.File.FileReader
   ( FileReader
+  , fromEventTarget
   , toEventTarget
   , fileReader
   , readyState
@@ -12,7 +13,7 @@ module Web.File.FileReader
 
 import Prelude
 
-import Data.Maybe (fromJust)
+import Data.Maybe (Maybe, fromJust)
 import Effect (Effect)
 import Foreign (Foreign)
 import Partial.Unsafe (unsafePartial)
@@ -20,8 +21,12 @@ import Unsafe.Coerce (unsafeCoerce)
 import Web.Event.EventTarget (EventTarget)
 import Web.File.Blob (Blob)
 import Web.File.FileReader.ReadyState (toEnumReadyState, ReadyState)
+import Web.Internal.FFI (unsafeReadProtoTagged)
 
 foreign import data FileReader :: Type
+
+fromEventTarget :: EventTarget -> Maybe FileReader
+fromEventTarget = unsafeReadProtoTagged "FileReader"
 
 toEventTarget :: FileReader -> EventTarget
 toEventTarget = unsafeCoerce

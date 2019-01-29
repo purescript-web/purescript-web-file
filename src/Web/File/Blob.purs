@@ -1,5 +1,7 @@
 module Web.File.Blob
   ( Blob
+  , fromString
+  , fromArray
   , type_
   , size
   , StartByte(..)
@@ -20,6 +22,19 @@ import Unsafe.Coerce (unsafeCoerce)
 
 foreign import data Blob :: Type
 
+-- | Creates a String with the given Mediatype
+-- | For example:
+-- | ```
+-- | myBlob = fromString (unsafeStringify { name: "Carl", age: 25 }) (MediaType "application/json")
+-- | ```
+fromString :: String -> MediaType -> Blob
+fromString str ct = blobImpl [str] ct
+
+-- | Creates a Blob from an Array of strings with the given Mediatype
+fromArray :: Array String -> MediaType -> Blob
+fromArray args opts = blobImpl args opts
+
+foreign import blobImpl :: Array String -> MediaType -> Blob
 foreign import typeImpl :: Blob -> String
 
 -- | `MediaType` of the data contained in the `Blob`.

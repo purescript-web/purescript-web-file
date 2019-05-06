@@ -3,6 +3,7 @@ module Web.File.FileReader
   , fromEventTarget
   , toEventTarget
   , fileReader
+  , error
   , readyState
   , result
   , abort

@@ -17,6 +17,6 @@
   "dependencies": {
     "purescript-foreign": "5",
     "purescript-media-types": "4",
-    "purescript-web-dom": "2 - 3"
+    "purescript-web-dom": "2 - 4"
   }
 }

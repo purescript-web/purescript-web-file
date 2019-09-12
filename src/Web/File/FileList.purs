@@ -11,7 +11,7 @@ import Data.Maybe (Maybe)
 import Data.Nullable (Nullable, toMaybe)
 import Data.Tuple (Tuple(..))
 import Web.File.File (File)
-import Data.Unfoldable (unfoldr)
+import Data.Unfoldable (class Unfoldable, unfoldr)
 
 foreign import data FileList :: Type
 
@@ -24,6 +24,6 @@ foreign import _item :: Int -> FileList -> Nullable File
 item :: Int -> FileList -> Maybe File
 item i = toMaybe <<< _item i
 
-items :: FileList -> Array File
+items :: forall t. Unfoldable t => FileList -> t File
 items fl = unfoldr (\i -> (flip Tuple (i + 1)) <$> item i fl) 0
 

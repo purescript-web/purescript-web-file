@@ -7,11 +7,11 @@ module Web.File.FileList
 
 import Prelude
 
-import Data.Maybe (Maybe(..))
+import Data.Maybe (Maybe)
 import Data.Nullable (Nullable, toMaybe)
-import Data.Array (snoc)
 import Data.Tuple (Tuple(..))
 import Web.File.File (File)
+import Data.Unfoldable (unfoldr)
 
 foreign import data FileList :: Type
 
@@ -25,10 +25,5 @@ item :: Int -> FileList -> Maybe File
 item i = toMaybe <<< _item i
 
 items :: FileList -> Array File
-items fl = untilNothing (\c fs -> Tuple (c + 1) <<< snoc fs <$> item c fl) 0 mempty
-
-untilNothing :: forall a b. (a -> b -> Maybe (Tuple a b)) -> a -> b -> b
-untilNothing f x y = let m = f x y in
-  case m of (Just (Tuple x' y')) -> untilNothing f x' y'
-            Nothing -> y
+items fl = unfoldr (\i -> (flip Tuple (i + 1)) <$> item i fl) 0
 

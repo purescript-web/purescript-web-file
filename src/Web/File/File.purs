@@ -14,6 +14,8 @@ toBlob = unsafeCoerce
 
 foreign import name :: File -> String
 
+foreign import lastModified :: File -> Number
+
 -- | (Inherited from `Blob`) `MediaType` of the data contained in the `Blob`.
 -- | Returns `Nothing` if the `MediaType` is unknown.
 type_ :: File -> Maybe MediaType

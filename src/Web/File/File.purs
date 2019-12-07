@@ -2,6 +2,7 @@ module Web.File.File where
 
 import Prelude
 
+import Data.DateTime.Instant (Instant)
 import Data.Maybe (Maybe)
 import Data.MediaType (MediaType)
 import Unsafe.Coerce (unsafeCoerce)
@@ -14,7 +15,7 @@ toBlob = unsafeCoerce
 
 foreign import name :: File -> String
 
-foreign import lastModified :: File -> Number
+foreign import lastModified :: File -> Instant
 
 -- | (Inherited from `Blob`) `MediaType` of the data contained in the `Blob`.
 -- | Returns `Nothing` if the `MediaType` is unknown.

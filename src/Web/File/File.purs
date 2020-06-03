@@ -12,6 +12,8 @@ foreign import data File :: Type
 toBlob :: File -> Blob.Blob
 toBlob = unsafeCoerce
 
+foreign import fromBlob :: Blob.Blob -> String -> File
+
 foreign import name :: File -> String
 
 -- | (Inherited from `Blob`) `MediaType` of the data contained in the `Blob`.

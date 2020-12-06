@@ -1,14 +1,15 @@
 # purescript-web-file
 
 [![Latest release](http://img.shields.io/github/release/purescript-web/purescript-web-file.svg)](https://github.com/purescript-web/purescript-web-file/releases)
-[![Build status](https://travis-ci.org/purescript-web/purescript-web-file.svg?branch=master)](https://travis-ci.org/purescript-web/purescript-web-file)
+[![Build status](https://github.com/purescript/purescript-web-file/workflows/CI/badge.svg?branch=master)](https://github.com/purescript/purescript-web-file/actions?query=workflow%3ACI+branch%3Amaster)
+[![Pursuit](https://pursuit.purescript.org/packages/purescript-web-file/badge)](https://pursuit.purescript.org/packages/purescript-web-file)
 
 Type definitions and low level interface implementations for the [W3C File API](https://www.w3.org/TR/FileAPI/).
 
 ## Installation
 
 ```
-bower install purescript-web-file
+spago install web-file
 ```
 
 ## Documentation

@@ -4,6 +4,6 @@
     "build": "eslint src && spago build '--censor-lib --strict'"
   },
   "devDependencies": {
-    "eslint": "^4.19.1"
+    "eslint": "^7.6.0"
   }
 }

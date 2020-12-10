@@ -16,7 +16,7 @@
   ],
   "dependencies": {
     "purescript-foreign": "master",
-    "purescript-media-types": "master",
+    "purescript-media-types": "main",
     "purescript-web-dom": "master"
   }
 }

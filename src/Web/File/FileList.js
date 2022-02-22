@@ -1,9 +1,9 @@
 "use strict";
 
-exports.length = function (fileList) { return fileList.length; };
+export function length(fileList) { return fileList.length; }
 
-exports._item = function (index) {
+export function _item(index) {
   return function (fileList) {
     return fileList.item(index);
   };
-};
+}

@@ -1,53 +1,51 @@
-"use strict";
-
-exports.fileReader = function () {
+export function fileReader() {
   return new FileReader();
-};
+}
 
-exports.error = function (fr) {
+export function error(fr) {
   return function () {
     return fr.error;
   };
-};
+}
 
-exports.readyStateImpl = function (fr) {
+export function readyStateImpl(fr) {
   return function () {
     return fr.readyState;
   };
-};
+}
 
-exports.result = function (fr) {
+export function result(fr) {
   return function () {
     return fr.result;
   };
-};
+}
 
-exports.abort = function (fr) {
+export function abort(fr) {
   return function () {
     fr.abort();
   };
-};
+}
 
-exports.readAsText = function (blob) {
+export function readAsText(blob) {
   return function (fr) {
     return function () {
       fr.readAsText(blob);
     };
   };
-};
+}
 
-exports.readAsArrayBuffer = function (blob) {
+export function readAsArrayBuffer(blob) {
   return function (fr) {
     return function () {
       fr.readAsArrayBuffer(blob);
     };
   };
-};
+}
 
-exports.readAsDataURL = function (blob) {
+export function readAsDataURL(blob) {
   return function (fr) {
     return function () {
       fr.readAsDataURL(blob);
     };
   };
-};
+}

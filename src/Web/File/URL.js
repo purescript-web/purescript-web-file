@@ -1,13 +1,11 @@
-"use strict";
-
-exports.createObjectURL = function (blob) {
+export function createObjectURL(blob) {
   return function () {
     return URL.createObjectURL(blob);
   };
-};
+}
 
-exports.revokeObjectURL = function (url) {
+export function revokeObjectURL(url) {
   return function () {
     URL.revokeObjectURL(url);
   };
-};
+}

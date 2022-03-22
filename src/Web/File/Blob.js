@@ -1,5 +1,3 @@
-"use strict";
-
 export function typeImpl(blob) { return blob.type; }
 
 export function blobImpl(args) {

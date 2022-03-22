@@ -1,5 +1,3 @@
-"use strict";
-
 export function length(fileList) { return fileList.length; }
 
 export function _item(index) {

@@ -1,5 +1,3 @@
-"use strict";
-
 export function fileReader() {
   return new FileReader();
 }

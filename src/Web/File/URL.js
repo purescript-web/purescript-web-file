@@ -1,5 +1,3 @@
-"use strict";
-
 export function createObjectURL(blob) {
   return function () {
     return URL.createObjectURL(blob);

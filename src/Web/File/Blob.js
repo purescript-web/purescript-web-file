@@ -1,16 +1,16 @@
 "use strict";
 
-exports.typeImpl = function (blob) { return blob.type; };
+export function typeImpl(blob) { return blob.type; }
 
-exports.blobImpl = function (args) {
+export function blobImpl(args) {
   return function (mediaType) {
     return new Blob(args, {type: mediaType});
   };
-};
+}
 
-exports.size = function (blob) { return blob.size; };
+export function size(blob) { return blob.size; }
 
-exports.slice = function (contentType) {
+export function slice(contentType) {
   return function (start) {
     return function (end) {
       return function (blob) {
@@ -18,4 +18,4 @@ exports.slice = function (contentType) {
       };
     };
   };
-};
+}

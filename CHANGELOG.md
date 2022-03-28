@@ -12,6 +12,7 @@ New features:
 Bugfixes:
 
 Other improvements:
+- Update `Math` import to use `Data.Number` (#20 by @JordanMartinez)
 
 ## [v3.0.0](https://github.com/purescript-web/purescript-web-file/releases/tag/v3.0.0) - 2021-02-26
 

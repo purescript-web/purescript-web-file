@@ -16,7 +16,7 @@ module Web.File.Blob
 import Data.Int (toNumber)
 import Data.Maybe (Maybe(..))
 import Data.MediaType (MediaType(..))
-import Math (round)
+import Data.Number (round)
 import Prelude ((==), (>>>))
 import Unsafe.Coerce (unsafeCoerce)
 

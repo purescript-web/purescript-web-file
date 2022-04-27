@@ -15,8 +15,8 @@
     "package.json"
   ],
   "dependencies": {
-    "purescript-foreign": "master",
-    "purescript-media-types": "main",
-    "purescript-web-dom": "master"
+    "purescript-foreign": "^7.0.0",
+    "purescript-media-types": "^6.0.0",
+    "purescript-web-dom": "^6.0.0"
   }
 }

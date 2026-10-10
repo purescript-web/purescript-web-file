@@ -1,12 +1,11 @@
-module Web.File.Url 
-  (createObjectURL
+module Web.File.Url
+  ( createObjectURL
   , revokeObjectURL
   ) where
 
 import Prelude
 import Effect (Effect)
 import Web.File.Blob (Blob)
-
 
 -- | Adds this blob to the url store
 -- | The string is a url that can be used to

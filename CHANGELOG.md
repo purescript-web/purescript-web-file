@@ -12,6 +12,18 @@ Bugfixes:
 
 Other improvements:
 
+## [v4.0.1](https://github.com/purescript-web/purescript-web-file/releases/tag/v4.0.1) - 2026-10-10
+
+Breaking changes:
+
+New features:
+
+Bugfixes:
+
+Other improvements:
+- Migrate from Bower/Pulp to registry-backed Spago and PureScript 0.15.16, preserving published dependency bounds (#24 by @thomashoneyman)
+- Modernize npm-based CI and development tooling with Oxlint, Oxfmt, and purs-tidy (#24 by @thomashoneyman)
+
 ## [v4.0.0](https://github.com/purescript-web/purescript-web-file/releases/tag/v4.0.0) - 2022-04-27
 
 Breaking changes:

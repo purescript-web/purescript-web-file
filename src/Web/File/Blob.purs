@@ -28,7 +28,7 @@ foreign import data Blob :: Type
 -- | myBlob = fromString (unsafeStringify { name: "Carl", age: 25 }) (MediaType "application/json")
 -- | ```
 fromString :: String -> MediaType -> Blob
-fromString str ct = blobImpl [str] ct
+fromString str ct = blobImpl [ str ] ct
 
 -- | Creates a Blob from an Array of strings with the given Mediatype
 fromArray :: Array String -> MediaType -> Blob
@@ -44,9 +44,8 @@ type_ blob =
   let
     blobType = typeImpl blob
   in
-    if blobType == ""
-      then Nothing
-      else Just (MediaType blobType)
+    if blobType == "" then Nothing
+    else Just (MediaType blobType)
 
 -- | The size (in bytes) of the data contained in the `Blob`.
 foreign import size :: Blob -> Number
